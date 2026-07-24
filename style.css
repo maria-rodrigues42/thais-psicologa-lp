@@ -231,8 +231,28 @@ a {
   width: 100%;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.instagram-icon {
+  color: var(--brand-green);
+  transition: var(--transition);
+  display: flex;
+}
+
+.instagram-icon:hover {
+  color: var(--brand-accent);
+  transform: translateY(-2px);
+}
+
 @media (max-width: 900px) {
   .nav-links {
+    display: none;
+  }
+  .instagram-icon {
     display: none;
   }
 }
@@ -581,6 +601,23 @@ a {
   align-items: center;
   font-size: 0.875rem;
   color: rgba(255,255,255,0.6);
+}
+
+.footer-social {
+  margin-top: 1.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.8);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .text-link {
