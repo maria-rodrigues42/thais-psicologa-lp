@@ -398,6 +398,16 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%; /* Mantém o foco mais para o topo (rosto) em retratos */
+}
+
+@media (max-width: 768px) {
+  .card-image {
+    height: 240px; /* Aumenta a altura no celular para enquadrar melhor */
+  }
+  .card-image img {
+    object-position: center top;
+  }
 }
 
 .card-icon {
