@@ -398,15 +398,15 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%; /* Mantém o foco mais para o topo (rosto) em retratos */
+  object-position: center 30%; /* Ponto ideal médio para a maioria das fotos */
 }
 
 @media (max-width: 768px) {
   .card-image {
-    height: 240px; /* Aumenta a altura no celular para enquadrar melhor */
+    height: 350px; /* Mais alto no mobile para não achatar imagens verticais */
   }
   .card-image img {
-    object-position: center top;
+    object-position: center 30%; /* Foco na altura do rosto */
   }
 }
 
