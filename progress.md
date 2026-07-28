@@ -110,3 +110,10 @@ npm run build
 
 ## Log de sprints
 
+- **2026-07-28**: Ajustes solicitados pela cliente (Thaís) aplicados seguindo a skill `anti-template-ui`:
+  - **Menu e Hero ("Para quem é")**: Atualizado o link na navegação para "Para quem é" (substituindo o rótulo anterior) e criado o componente visual `.hero-target-pills` (`Infantil • Adolescentes • Adultos • Idosos`) diretamente no Hero, permitindo visualização das faixas etárias logo no início.
+  - **Etapas de Avaliação (Sem "Correção")**: Removida a etapa interna de "Correção" do fluxo "Como funciona", deixando 3 etapas claras voltadas à experiência do paciente: Anamnese, Testagem e Devolutiva.
+  - **Sem ênfase negativa sobre psicoterapia**: Substituído o item que mencionava "(não realizo psicoterapia)" por copy humano e focado em valor ("Atuação focada na Avaliação Neuropsicológica com alto rigor técnico..."), evitando fechar portas para atendimentos particulares de terapia.
+  - **Sem menção a convênios**: Mantida a decisão de não mencionar planos/convênios no site, focando na atração de pacientes particulares.
+
+

@@ -288,6 +288,36 @@ a {
   margin-top: 2rem;
 }
 
+/* Hero Target Pills ("Para quem é") - Destaque visual logo no início */
+.hero-target-pills {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.6rem 1.35rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(178, 139, 114, 0.35);
+  box-shadow: var(--shadow-sm);
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--brand-green);
+}
+
+.hero-target-pills span {
+  letter-spacing: 0.01em;
+}
+
+.hero-target-pills .dot {
+  color: var(--brand-accent);
+  font-weight: 700;
+  opacity: 0.85;
+}
+
 /* Quebra de Grid & Assimetria */
 .hero-image-wrapper {
   position: relative;
@@ -374,6 +404,11 @@ a {
   }
   .hero-actions {
     flex-direction: column;
+  }
+  .hero-target-pills {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    font-size: 0.88rem;
   }
 }
 
