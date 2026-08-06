@@ -556,46 +556,234 @@ a {
    ================================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .about-image-wrapper img {
   width: 100%;
-  border-radius: 24px 200px 24px 24px;
+  border-radius: 200px 200px 24px 24px;
   box-shadow: var(--shadow-md);
+  object-fit: cover;
+  height: auto;
 }
 
+/* Stats Card */
+.about-stats-card {
+  background-color: var(--bg-warm);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-color: var(--brand-green);
+  color: var(--bg-warm);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-text strong {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--brand-green);
+  line-height: 1.2;
+}
+
+.stat-text span {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 0.15rem;
+}
+
+/* About Content */
 .subtitle {
   font-weight: 500;
   color: var(--brand-green);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
 }
 
-.about-list {
+.about-paragraph {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.about-features {
   list-style: none;
-  margin-top: 2rem;
-}
-
-.about-list li {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-.about-list svg {
+.about-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.about-features li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  background-color: var(--bg-warm);
+  color: var(--brand-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.feature-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-text strong {
+  color: var(--brand-green);
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.feature-text span {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* CTA Banner (Vamos conversar) */
+.about-cta-banner {
+  background-color: var(--bg-warm);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.cta-banner-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.cta-banner-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1.5px solid var(--text-main);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-banner-icon svg {
   width: 24px;
   height: 24px;
-  min-width: 24px;
-  color: var(--brand-accent);
-  margin-top: 4px;
 }
 
-@media (max-width: 900px) {
+.cta-banner-text strong {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.cta-banner-text p {
+  color: var(--text-muted);
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+.cta-banner-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 260px;
+}
+
+.cta-banner-action .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.cta-banner-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 992px) {
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-cta-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cta-banner-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-banner-action {
+    width: 100%;
   }
 }
 
