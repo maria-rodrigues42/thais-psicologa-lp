@@ -506,22 +506,25 @@ a {
   position: relative;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 24px;
-  top: 25px;
-  height: calc(100% - 50px);
-  width: 1px;
-  background-color: var(--brand-accent);
-  opacity: 0.4;
-}
+/* Line is drawn by step pseudo-elements now */
 
 .timeline-step {
   display: flex;
   gap: 2rem;
   position: relative;
-  z-index: 2;
+  align-items: flex-start;
+}
+
+.timeline-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 50px;
+  height: calc(100% + 3rem - 50px);
+  width: 1px;
+  background-color: var(--brand-accent);
+  opacity: 0.4;
+  z-index: 1;
 }
 
 .step-number {
