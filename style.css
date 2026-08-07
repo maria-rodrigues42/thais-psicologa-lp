@@ -4,6 +4,7 @@
 :root {
   /* Cores (Fugindo de absolutos, tons quentes e complexos) */
   --bg-warm: #FAF7F2;      /* Respiro principal, gelo/creme */
+  --bg-warm-dark: #EFE8DD; /* Cartões com fundo ligeiramente mais escuro no Sobre */
   --bg-surface: #FFFFFF;   /* Cartões e modais */
   --brand-green: #29483A;  /* Verde Floresta - Principal */
   --brand-green-hover: #1E372C;
@@ -577,7 +578,7 @@ a {
 
 /* Stats Card */
 .about-stats-card {
-  background-color: var(--bg-warm);
+  background-color: var(--bg-warm-dark);
   border-radius: var(--radius-md);
   padding: 1.5rem;
   display: flex;
@@ -593,11 +594,12 @@ a {
 }
 
 .stat-icon {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  background-color: var(--brand-green);
-  color: var(--bg-warm);
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background-color: transparent;
+  border: 1px solid var(--text-main);
+  color: var(--text-main);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -616,8 +618,9 @@ a {
 
 .stat-text strong {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
-  color: var(--brand-green);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--text-main);
   line-height: 1.2;
 }
 
@@ -662,11 +665,12 @@ a {
 }
 
 .feature-icon {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  background-color: var(--bg-warm);
-  color: var(--brand-accent);
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-color: transparent;
+  border: 1px solid var(--text-main);
+  color: var(--text-main);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -685,8 +689,10 @@ a {
 }
 
 .feature-text strong {
-  color: var(--brand-green);
-  font-size: 1.05rem;
+  color: var(--text-main);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
   margin-bottom: 0.2rem;
 }
 
@@ -697,7 +703,7 @@ a {
 
 /* CTA Banner (Vamos conversar) */
 .about-cta-banner {
-  background-color: var(--bg-warm);
+  background-color: var(--bg-warm-dark);
   border-radius: var(--radius-md);
   padding: 2rem;
   margin-top: 3.5rem;
@@ -715,12 +721,12 @@ a {
 }
 
 .cta-banner-icon {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
   background-color: transparent;
   color: var(--text-main);
-  border: 1.5px solid var(--text-main);
+  border: 1px dashed var(--text-main);
   border-radius: 50%;
   display: flex;
   align-items: center;
