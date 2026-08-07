@@ -500,7 +500,7 @@ a {
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
@@ -510,10 +510,11 @@ a {
   content: '';
   position: absolute;
   left: 24px;
-  top: 0;
-  height: 100%;
-  width: 2px;
-  background-color: rgba(178, 139, 114, 0.3);
+  top: 25px;
+  height: calc(100% - 50px);
+  width: 1px;
+  background-color: var(--brand-accent);
+  opacity: 0.4;
 }
 
 .timeline-step {
@@ -528,7 +529,7 @@ a {
   height: 50px;
   min-width: 50px;
   background-color: var(--bg-surface);
-  border: 2px solid var(--brand-accent);
+  border: 1px solid var(--brand-accent);
   color: var(--brand-green);
   border-radius: 50%;
   display: flex;
@@ -536,20 +537,30 @@ a {
   justify-content: center;
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  z-index: 2;
 }
 
 .step-content {
-  padding-top: 0.5rem;
   background: var(--bg-surface);
-  padding: 1.5rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   width: 100%;
 }
 
+.step-content h4 {
+  color: var(--brand-green);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
 .step-content p {
+  color: var(--text-muted);
   margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* ==================================================
